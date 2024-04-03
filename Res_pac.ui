@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>556</width>
+    <height>347</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qconicalgradient(cx:1, cy:1, angle:263.8, stop:0.505682 rgba(255, 255, 255, 207), stop:1 rgba(0, 0, 0, 255));</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QTableWidget" name="tableWidget">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+        <row>
+         <property name="text">
+          <string>Ф.  правый тазобедренный сустав</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Ф. левый тазобедренный сустав</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>С. правый тазобедренный сустав</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>С. левый тазобедренный сустав</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>С. правый коленный сустав</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>С. левый коленный сустав</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>С. правый голеностопный сустав</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>С. левый голеностопынй сустав</string>
+         </property>
+        </row>
+        <column>
+         <property name="text">
+          <string>Среднее</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Максимальное</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Минимальное</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Назад</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
