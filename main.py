@@ -1,4 +1,3 @@
-###библиотеки########################################
 import asyncio
 from PyQt5 import uic
 from PyQt5.QtGui import QPixmap
@@ -12,23 +11,23 @@ import easygui
 import matplotlib.pyplot as plt
 import numpy as np
 from cv2_enumerate_cameras import enumerate_cameras
-####################################################
 
 
 
 
-###базовые переменные##############################
+
+
 tit = 'STEP CARTOGRAPHER'
 name_pap = 0
 par_r = [0]*9
 par_l = [0]*9
 par_f = [0]*6
-###################################################
 
 
 
 
-###Главное окно####################################
+
+
 class Window(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -68,12 +67,12 @@ class Window(QMainWindow):
     ### завершает программу
     def off(self):
         sys.exit()
-##################################################
 
 
 
 
-###Класс настроек#################################
+
+
 class Seti(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -132,12 +131,12 @@ class Seti(QMainWindow):
         self.window = Window()
         self.window.show()
         Seti.close(self)
-##################################################
 
 
 
 
-###Класс запуска процесса#########################
+
+
 class Go(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -228,12 +227,12 @@ class Go(QMainWindow):
         self.res = Results()
         self.res.show()
         Go.close(self)
-##########################################
 
 
 
 
-###Класс конечного меню##########################
+
+
 class Results(QMainWindow, QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
@@ -345,12 +344,12 @@ class Results(QMainWindow, QtWidgets.QWidget):
         self.win = Window()
         self.win.show()
         Results.close(self)
-######################################################
 
 
 
 
-###Класс окна с таблицами#############################
+
+
 class Table(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -403,12 +402,12 @@ class Table(QMainWindow):
         self.tsrav = Tsrav()
         self.tsrav.show()
         Table.close(self)
-#############################################
 
 
 
 
-###Окно результатов сравнения################
+
+
 class Tsrav(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -449,13 +448,13 @@ class Tsrav(QMainWindow):
         self.res = Results()
         self.res.show()
         Tsrav.close(self)
-#############################################
 
 
 
 
 
-###окно с результатами в таблице#############
+
+
 class Restabe(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -505,15 +504,14 @@ class Restabe(QMainWindow):
         self.res = Results()
         self.res.show()
         Restabe.close(self)
-#############################################
 
 
 
 
-###запуск программы##########################
+
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = Window()
     ex.show()
     sys.exit(app.exec_())
-#############################################
