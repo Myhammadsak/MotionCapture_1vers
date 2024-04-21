@@ -4,10 +4,18 @@ import numpy as np
 import pandas as pd
 import time
 import json
+import logging
+
+
+logging.basicConfig(
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.WARNING
+)
+logger = logging.getLogger(__name__)
 
 mp_drawing = mp.solutions.drawing_utils
 mp_pose = mp.solutions.pose
 a = time.monotonic()
+stop = 0
 
 #Создаем список для хранения углов
 list_angle_left_golen_left_camera = []
@@ -129,6 +137,7 @@ with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5) as 
 
         # Завершает процесс qпо истечении 30 секунд
         if cv2.waitKey(10) & 0xFF == ord('q') or time.monotonic() - a > 30:
+            stop += 1
             break
 
     cap.release()

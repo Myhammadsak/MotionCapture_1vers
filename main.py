@@ -1,4 +1,3 @@
-import asyncio
 from PyQt5 import uic
 from PyQt5.QtGui import QPixmap
 import os
@@ -6,13 +5,13 @@ from PyQt5 import QtWidgets
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 import sys
-import json
 import easygui
 import matplotlib.pyplot as plt
-import numpy as np
 from cv2_enumerate_cameras import enumerate_cameras
-
-
+import numpy as np
+import time
+import json
+import asyncio
 
 
 
@@ -88,7 +87,7 @@ class Seti(QMainWindow):
         cameras = []
         for camera_info in enumerate_cameras():
             cameras.append(f'{camera_info.index}: {camera_info.name}')
-        for i in range(len(cameras)//2 - 1):
+        for i in range(len(cameras)):
             self.listWidget.addItem(f'{cameras[i]}\n')
         self.num_index_prov = len(cameras)
 
@@ -181,6 +180,7 @@ class Go(QMainWindow):
 
             self.go.hide()
             self.lineEdit.hide()
+            a = time.monotonic()
 
             try:
                 SCRIPTS = [
@@ -215,6 +215,7 @@ class Go(QMainWindow):
 
             except:
                 pass
+
         self.go_2.clicked.connect(self.ggo)
 
     ###Функция перемещения текстовых файлов в персональную папку
@@ -308,9 +309,13 @@ class Results(QMainWindow, QtWidgets.QWidget):
 
     ###Выбор файла для сравнения
     def file_srav(self):
-        input_file = easygui.diropenbox()
-        global name_pap
-        name_pap = input_file[3:]
+        popit = 0
+        while popit == 0:
+            input_file = easygui.diropenbox()
+            global name_pap
+            name_pap = input_file[3:]
+            if name_pap != 0:
+                popit = 1
 
     ###Переход в окно с таблицами
     def table(self):
@@ -505,13 +510,14 @@ class Restabe(QMainWindow):
         self.res.show()
         Restabe.close(self)
 
-
-
-
+def except_hook(cls, exception, traceback):
+    sys.excepthook(cls, exception, traceback)
 
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
+    app.setStyle('Fusion')
     ex = Window()
     ex.show()
+    sys.excepthook = except_hook
     sys.exit(app.exec_())

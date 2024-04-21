@@ -53,7 +53,7 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(203, 203, 203);</string>
         </property>
         <property name="text">
          <string>Результаты</string>
@@ -68,7 +68,7 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(203, 203, 203);</string>
         </property>
         <property name="text">
          <string>Таблица</string>
@@ -83,7 +83,7 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(203, 203, 203);</string>
         </property>
         <property name="text">
          <string>Диаграммы</string>
@@ -146,7 +146,7 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(203, 203, 203);</string>
         </property>
         <property name="text">
          <string>Начать</string>
@@ -163,7 +163,7 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(203, 203, 203);</string>
         </property>
         <property name="text">
          <string>Заново</string>

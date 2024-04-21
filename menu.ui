@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: qconicalgradient(cx:1, cy:1, angle:0, stop:0.181818 rgba(0, 0, 0, 255), stop:0.409091 rgba(255, 255, 255, 250));</string>
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -56,7 +56,7 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(203, 203, 203);</string>
         </property>
         <property name="text">
          <string>Начать</string>
@@ -71,7 +71,7 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(203, 203, 203);</string>
         </property>
         <property name="text">
          <string>К результатам</string>
@@ -86,7 +86,7 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(203, 203, 203);</string>
         </property>
         <property name="text">
          <string>Настройки</string>
@@ -101,7 +101,7 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(203, 203, 203);</string>
         </property>
         <property name="text">
          <string>Выход</string>
